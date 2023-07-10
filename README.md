@@ -1,19 +1,16 @@
-## Submission: 
-1. Submission is in pairs, but it's better for practice if you start alone.
-2. Coding: 70%, Questions: 30%.
-3. Your submitted git repo should be *private*, please make barashd@post.bgu.ac.il a collaborator.
-4. Do not use external libraries that provide the pagination component for you. If in doubt, contact the course staff.
-5. Deadline: 06/05/2023, end of day.
-6. Additionally, solve the [theoretical questions]( https://forms.gle/oPgpWcCSrcAN47QMA).
-7. Fill in repository details in https://moodle.bgu.ac.il/moodle/mod/questionnaire/view.php?id=2456041.
-
-
 ## The task
 The task is to add [pagination](https://www.w3schools.com/css/css3_pagination.asp) to the website:
 1. Populate your database with 1 million fake examples.(See example in 'prisma/seed.ts')
 2. Front end component: show 10 posts on each page.
-3. Updating the backend query to the database (see relevant reading material below)
-
+3. Reduce number of posts sent from backend to 10. Read about api routes below
+4. Add videos to our posts website
+5. The video metadata will be saved in mongoDB. Required metadata: user, date uploaded, id of post (sqlite), link to video (cloudinary)
+6. Automatic focus on the title text box in the create post page, instead of the current html tag, implement it yourself using an effect.
+7. If a video exists, it should appear, in every page where the post content is shown.
+8. Implement light/dark theme button for all frontent components
+9. support user management with authentication using cookies
+10. Add profiles to our posts website
+    
 ## Intro
 This example shows how to implement a **fullstack app in TypeScript with [Next.js](https://nextjs.org/)** using [React](https://reactjs.org/) (frontend), [Next.js API routes](https://nextjs.org/docs/api-routes/introduction) and [Prisma Client](https://www.prisma.io/docs/reference/tools-and-interfaces/prisma-client) (backend). It also demonstrates how to implement authentication using [NextAuth.js](https://next-auth.js.org/). The example uses an SQLite database file with some initial dummy data which you can find at [`./prisma/dev.database`](./prisma/dev.database).
 
@@ -22,44 +19,6 @@ This example demonstrates a website, which shows posts for many users. Some exam
 2. Get a list of posts from an external database (Called Prisma).
 3. Some posts are private drafts, and can only be seen by the author.
 4. Some posts are public and can be seen by all users.
-
-
-
-## Prerequisites
-### Prisma
-To understand how to use the Prisma mySQL database, 
-it is recommended to open a new directory and go through the Prisma database tutorial below,
-notice the Prisma Studio tool.
-### Git
-
-1. What is a repository.
-2. How to clone it.
-3. Edit it.
-4. Push it to a new repository owned by you.
-5. Add a collaborator.
-6. Add files and patterns to .gitignore, so you won't submit bloated dirs.
-
-Anything else, i.e. branches, is good to know but not a must.
-It's good to commit whenever you finish a small step and the project is working. The goal is to have a safe point to return to.
-
-### Links
-1. [atlassian-Setting up a repository](https://www.atlassian.com/git/tutorials/setting-up-a-repository)
-2. [git - the simple guide
-](https://rogerdudler.github.io/git-guide/)
-3. [prisma database tutorial](https://www.prisma.io/docs/getting-started/quickstart)
-4. [prisma pagination](https://www.prisma.io/docs/concepts/components/prisma-client/pagination)
-
-### Github 
-Hw1 will be submitted via Github. Please open a user with your BGU email address.
-To securely update files from your machine by ssh authentication:
-https://docs.github.com/en/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys 
-
-or using OAuth:
-https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
-
-This app contains material that we haven't seen yet in class, and that is not needed to complete this task:
-such as server-side rendering, static site generation, dynamic routing, and OAuth.
-
 
 ## Getting started
 
